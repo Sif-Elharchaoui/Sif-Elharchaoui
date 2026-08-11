@@ -1,0 +1,15 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Node (no runtime deps today, but keep this future-proof)
+node_modules/
+npm-debug.log*
+
+# Local-only preview output from `node preview.test.mjs` — never meant
+# for the live README, regenerate anytime with no token required.
+dist/preview*.svg
