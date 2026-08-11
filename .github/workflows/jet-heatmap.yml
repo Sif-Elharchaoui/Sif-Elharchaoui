@@ -1,0 +1,46 @@
+name: Update Jet Heatmap
+
+on:
+  schedule:
+    - cron: "0 1 * * *"   # runs every day at 01:00 UTC
+  workflow_dispatch:        # lets you trigger it manually from GitHub UI
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write       # needed to push the generated SVG back
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Generate terminal-themed SVG cards
+        env:
+          GH_USERNAME: Sif-Elharchaoui
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OUTPUT_PATH: dist/github-jet.svg
+          CONTRIB_OUTPUT_PATH: dist/github-contrib-card.svg
+          PROFILE_OUTPUT_PATH: dist/github-profile-card.svg
+          WAVE_OUTPUT_PATH: dist/contribution-wave.svg
+          LEETCODE_OUTPUT_PATH: dist/leetcode-card.svg
+          LEETCODE_USERNAME: HrSaif
+        run: node generate.mjs
+
+      - name: Commit and push updated SVGs
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Glob instead of an explicit file list: any card that failed to generate
+          # (e.g. a transient API hiccup) is simply absent, not a missing-pathspec error
+          # that would abort this step and block committing the cards that DID succeed.
+          git add dist/*.svg
+          git diff --cached --quiet || git commit -m "chore: update contribution, profile & leetcode cards [skip ci]"
+          git push
