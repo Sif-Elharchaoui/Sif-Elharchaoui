@@ -50,16 +50,16 @@
 <text x="18" y="90" class="label">STARS EARNED</text>
 
 <text x="262" y="60" class="label">COMMITS (1Y)</text>
-<text x="262" y="79" class="key">23</text>
+<text x="262" y="79" class="key">26</text>
 <text x="262" y="100" class="label">PULL REQUESTS (1Y)</text>
 <text x="262" y="119" class="key">0</text>
 
 <line x1="18" y1="124" x2="476" y2="124" stroke="#1f2937" stroke-width="1"/>
 <text x="18" y="136" class="label">TOP LANGUAGES</text>
 <rect x="18" y="142" width="458" height="10" rx="5" fill="#0B1120"/>
-<rect x="18" y="142" width="262.825" height="10" fill="#f1e05a"/><rect x="280.825" y="142" width="195.175" height="10" fill="#b07219"/>
-<circle cx="18" cy="162" r="3" fill="#f1e05a"/><text x="26" y="165" class="lang">JavaScript 57%</text>
-<circle cx="168" cy="162" r="3" fill="#b07219"/><text x="176" y="165" class="lang">Java 43%</text>
+<rect x="18" y="142" width="254.7671" height="10" fill="#f1e05a"/><rect x="272.7671" y="142" width="203.2329" height="10" fill="#b07219"/>
+<circle cx="18" cy="162" r="3" fill="#f1e05a"/><text x="26" y="165" class="lang">JavaScript 56%</text>
+<circle cx="168" cy="162" r="3" fill="#b07219"/><text x="176" y="165" class="lang">Java 44%</text>
 
 <rect x="0" y="-40" width="494" height="40" fill="url(#scanGradPC)" opacity="0.6" style="mix-blend-mode:screen">
   <animateTransform attributeName="transform" type="translate" from="0 -40" to="0 235" dur="4.2s" repeatCount="indefinite"/>
