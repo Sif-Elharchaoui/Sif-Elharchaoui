@@ -50,14 +50,14 @@
 <text x="18" y="90" class="label">STARS EARNED</text>
 
 <text x="262" y="60" class="label">COMMITS (1Y)</text>
-<text x="262" y="79" class="key">89</text>
+<text x="262" y="79" class="key">93</text>
 <text x="262" y="100" class="label">PULL REQUESTS (1Y)</text>
 <text x="262" y="119" class="key">0</text>
 
 <line x1="18" y1="124" x2="476" y2="124" stroke="#1f2937" stroke-width="1"/>
 <text x="18" y="136" class="label">TOP LANGUAGES</text>
 <rect x="18" y="142" width="458" height="10" rx="5" fill="#0B1120"/>
-<rect x="18" y="142" width="281.9914" height="10" fill="#b07219"/><rect x="299.9914" y="142" width="176.0086" height="10" fill="#f1e05a"/>
+<rect x="18" y="142" width="284.7306" height="10" fill="#b07219"/><rect x="302.7306" y="142" width="173.2694" height="10" fill="#f1e05a"/>
 <circle cx="18" cy="162" r="3" fill="#b07219"/><text x="26" y="165" class="lang">Java 62%</text>
 <circle cx="168" cy="162" r="3" fill="#f1e05a"/><text x="176" y="165" class="lang">JavaScript 38%</text>
 
